@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+
+  ESTE ES UN ARCHIVO DE EJEMPLO. Copialo como "Web.config" en esta misma carpeta
+  y reemplaza los valores marcados con <<...>> por las credenciales reales.
+  Web.config (el real) esta excluido del repositorio via .gitignore.
+  -->
+<configuration>
+  <configSections>
+    <sectionGroup name="businessObjects">
+      <sectionGroup name="crystalReports">
+        <section name="rptBuildProvider" type="CrystalDecisions.Shared.RptBuildProviderHandler, CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, Custom=null"/>
+        <section name="crystalReportViewer" type="System.Configuration.NameValueSectionHandler"/>
+      </sectionGroup>
+    </sectionGroup>
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="Everywhere"/>
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+    <section name="ListaParam" type="System.Configuration.NameValueFileSectionHandler,System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  </configSections>
+  <appSettings>
+    <add key="CrystalImageCleaner-AutoStart" value="true"/>
+    <add key="CrystalImageCleaner-Sleep" value="60000"/>
+    <add key="CrystalImageCleaner-Age" value="120000"/>
+    <add key="BusinessObjects" value="\\10.1.26.229\SWReports\BusinessObjects\"/>
+    <add key="EmailSettings" value="<<from-address>>;<<display-name>>;smtp.outlook.office365.com;587;<<smtp-password>>"/>
+    <add key="EmailTo" value="<<comma-separated-recipients>>"/>
+    <add key="EmailCc" value="<<comma-separated-cc>>"/>
+  </appSettings>
+  <!--
+    Para obtener una descripción de los cambios de web.config, vea http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    Los siguientes atributos se pueden establecer en la etiqueta <httpRuntime>.
+      <system.Web>
+        <httpRuntime targetFramework="4.8" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.8">
+      <assemblies>
+        <add assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+        <add assembly="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+        <add assembly="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+      </assemblies>
+    </compilation>
+    <httpHandlers>
+      <add verb="GET" path="CrystalImageHandler.aspx" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+    </httpHandlers>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <controls>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit"/>
+      </controls>
+    </pages>
+    <customErrors mode="Off"/>
+    <authentication mode="Windows"/>
+    <identity impersonate="false"/>
+    <authorization>
+      <allow users="*"/>
+      <deny users="?"/>
+    </authorization>
+    <browserCaps userAgentCacheKeyLength="256"/>
+    <xhtmlConformance mode="Transitional"/>
+  </system.web>
+  <businessObjects>
+    <crystalReports>
+      <rptBuildProvider>
+        <add embedRptInResource="true"/>
+      </rptBuildProvider>
+      <crystalReportViewer>
+        <add key="ResourceUri" value="../crystalreportviewers13"/>
+      </crystalReportViewer>
+    </crystalReports>
+  </businessObjects>
+  <system.webServer>
+    <handlers>
+      <add name="CrystalImageHandler.aspx_GET" verb="GET" path="CrystalImageHandler.aspx" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" preCondition="integratedMode"/>
+    </handlers>
+    <validation validateIntegratedModeConfiguration="false"/>
+  </system.webServer>
+  <ListaParam>
+    <add key="Rep44" value="44|SLS - SW - 0044 - Sales - Lot Details.rpt|FiscalPeriod;FiscalYear"/>
+    <add key="Rep45" value="45|SLS - SW - 0045 Net Sales Mexico.rpt|StartDate;EndDate"/>
+    <add key="Rep46" value="46|SLS - SW - 0046 Gross Margin By Sales Rep.rpt|StartDate;EndDate"/>
+    <add key="Rep47" value="47|SLS - SW - 0047 - Sales Profit Dashboard (Material Sales).rpt|StartDate;EndDate"/>
+    <add key="Rep48" value="48|SLS - SW - 0048 - Sales Commissions.rpt|StartDate;EndDate"/>
+  </ListaParam>
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="50000000"/>
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+  <connectionStrings>
+    <add name="DB" connectionString="Data Source=<<db-server>>;Initial Catalog=E10;User ID=<<db-user>>;Password=<<db-password>>;Connection Timeout=0;" providerName="System.Data.SqlClient"/>
+    <add name="EReporting" connectionString="Data Source=<<reporting-server>>;Initial Catalog=Epicor_Custom_Reporting;User ID=<<db-user>>;Password=<<db-password>>;Connection Timeout=0;" providerName="System.Data.SqlClient"/>
+    <add name="E10" connectionString="Data Source=<<db-server>>;Initial Catalog=E10;User ID=<<db-user>>;Password=<<db-password>>;Connection Timeout=0;" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-13.0.2000.0" newVersion="13.0.2000.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.Shared" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-13.0.2000.0" newVersion="13.0.2000.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

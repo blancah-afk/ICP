@@ -1,0 +1,164 @@
+﻿body {
+}
+.divKPIDetail {
+
+   white-space: initial; 
+   font-size:12px;
+}
+
+.tbDetail {
+width: 100%; 
+/*border-color: gainsboro;*/ 
+border: .5px;
+ 
+
+}
+.tbDetail2 {
+width: 100%; 
+/*border-color: gainsboro;*/ 
+border: 0px;
+ 
+
+}
+.tdDet {
+ width: 5%; 
+ vertical-align: top; 
+ background-color: white;
+     font-weight:bold;
+}
+
+.tdDetID {
+ width: 1%; 
+ vertical-align: top; 
+ background-color: white;
+}
+
+.thDet {
+ width: 15%; 
+ vertical-align: top; 
+ background-color: white;
+
+}
+
+.tdCat {
+height: 25px; 
+font-size: 20px; 
+/*background-color: #a6a6a6;*/
+color:white;
+
+
+}
+
+.tbCat {
+    width: 100%; 
+  
+    border-bottom-color:aqua;
+}
+.header {
+
+    background-color: #a6a6a6;
+}
+.thSubCat {
+     width: 90%; 
+     background-color: #a6a6a6; 
+     vertical-align: top;
+     border-bottom:solid;
+     border-bottom-width:1px;
+     border-bottom-color:white;
+ 
+}
+
+.thSubCat2 {
+    width: 10%; 
+    background-color: #a6a6a6; 
+    vertical-align: top;
+    text-align:right;
+    border-bottom:solid;
+    border-bottom-width:1px;
+    border-bottom-color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+.boton {
+color: white;
+text-align:left;
+
+}
+
+.boton1 {
+    color: white;
+    text-align: left;
+    width:10px;
+    padding-right:1em;
+}
+
+.boton:hover { 
+    color: gray; 
+ 
+}
+
+.boton1:hover { 
+    color: gray; 
+ 
+}
+
+.Below {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:red;
+     color:white;
+     font-weight:bold;
+}
+.Within {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:yellow;
+    color:black;
+       font-weight:bold;
+}
+.AtOrAbove {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:green;
+    color:white;
+       font-weight:bold;
+}
+
+.Preview {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:#86C3F6;
+       font-weight:bold;
+}
+
+.NoInfoAvailabe{
+    width: 5%; 
+    vertical-align: top; 
+    background-color:white;
+        
+}
+.Initial
+{
+  display: block;
+  padding: 4px 18px 4px 18px;
+  float: left;
+  background: url("../Images/InitialImage.png") no-repeat right top;
+  color: Black;
+  font-weight: bold;
+}
+.Initial:hover
+{
+  color: #a6a6a6;
+  background: url("../imgs/load.gif") no-repeat right top;
+}
+.Clicked
+{
+  float: left;
+  display: block;
+  background: url("../Images/SelectedButton.png") no-repeat right top;
+  padding: 4px 18px 4px 18px;
+  color: Black;
+
+  color: white;
+  background-color: #a6a6a6;
+}

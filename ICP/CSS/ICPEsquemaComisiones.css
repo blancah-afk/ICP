@@ -1,0 +1,230 @@
+﻿body {
+}
+.divKPIDetail {
+
+   white-space:initial; 
+   font-size:12px;
+}
+
+.tbDetail {
+
+/*border-color: gainsboro;*/ 
+border: .5px;
+width: 100%
+ 
+}
+
+.tbDetail2{
+width:  10%; 
+/*border-color: gainsboro;*/ 
+border: .5px;
+margin-top:-2px;
+ 
+}
+ 
+.tdDet {
+    width: 0%;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.tdDetCustName {
+    width:100%;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.tdDetStatus {
+    width:10%;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.tdDetID {
+ width: 100%; 
+ vertical-align: top; 
+ background-color: wheat;
+}
+
+.thDet {
+ width: 100%; 
+ vertical-align: top; 
+ background-color: white;
+
+}
+
+.tdCat {
+height: 25px; 
+font-size: 20px; 
+/*background-color: #a6a6a6;*/
+color:white;
+ 
+
+}
+
+.tbCat {
+    width: 100%; 
+
+}
+.header {
+
+    background-color: #a6a6a6;
+    text-align:center;
+}
+.headerForecast {
+
+    background-color: #f8cbad;
+    text-align:center;
+}
+ 
+.headerMargen {
+
+    background-color: #bdd7ee;
+    text-align:center;
+}
+
+.headerInventario {
+
+    background-color: #ffd966;
+    text-align:center;
+}
+
+
+.headerTotal {
+
+    background-color: #ff0000;
+    text-align:center;
+     color: white;
+}
+
+
+
+ 
+
+.thSubCat {
+     width: 100%; 
+     background-color: #a6a6a6; 
+     font-weight:bold;
+     vertical-align: top;
+     border-bottom:solid;
+     border-bottom-width:1px;
+     border-bottom-color:white;
+     text-align:center;
+     color:red;
+
+}
+
+.thSubCatSalesRep {
+     width: 100%; 
+     background-color: #a6a6a6; 
+     font-weight:bold;
+     font-size:large;
+     vertical-align: top;
+     border-bottom:solid;
+     border-bottom-width:1px;
+     border-bottom-color:white;
+     text-align:left;
+     color:red;
+
+}
+
+
+.thSubCat2 {
+     width: 100%; 
+     background-color: #e8e6e6; 
+     font-weight:bold;
+     vertical-align: top;
+     border-bottom:solid;
+     border-bottom-width:1px;
+     border-bottom-color:white;
+     text-align:left;
+     color:orange;
+
+}
+ 
+.boton {
+color: red;
+text-align:left;
+
+}
+
+.boton1 {
+    color: white;
+    text-align: left;
+    width:10px;
+    padding-right:1em;
+}
+
+.boton:hover { 
+    color: gray; 
+ 
+}
+
+.boton1:hover { 
+    color: gray; 
+ 
+}
+
+.Below {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:red;
+     color:white;
+     font-weight:bold;
+}
+.Within {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:yellow;
+    color:black;
+       font-weight:bold;
+}
+.AtOrAbove {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:green;
+    color:white;
+       font-weight:bold;
+}
+
+.Preview {
+    width: 5%; 
+    vertical-align: top; 
+    background-color:#86C3F6;
+       font-weight:bold;
+}
+
+.NoInfoAvailabe{
+    width: 5%; 
+    vertical-align: top; 
+    background-color:white;
+        
+}
+.Initial
+{
+  display: block;
+  padding: 4px 18px 4px 18px;
+  float: left;
+  background: url("../Images/InitialImage.png") no-repeat right top;
+  color: Black;
+  font-weight: bold;
+}
+.Initial:hover
+{
+  color: #a6a6a6;
+  background: url("../imgs/load.gif") no-repeat right top;
+}
+.Clicked
+{
+  float: left;
+  display: block;
+  background: url("../Images/SelectedButton.png") no-repeat right top;
+  padding: 4px 18px 4px 18px;
+  color: Black;
+
+  color: white;
+  background-color: #a6a6a6;
+}
+.hide {
+   visibility:hidden;
+}

@@ -493,8 +493,6 @@
     <Content Include="CSS\DateTimePicker.css" />
     <Content Include="CSS\div.css" />
     <Content Include="CSS\ICPEsquemaComisiones.css" />
-    <Content Include="CSS\ICPEsquemaComisionesClaro.css" />
-    <Content Include="CSS\ICPEsquemaComisionesOscuro.css" />
     <Content Include="CSS\images\glyphicons-halflings.png" />
     <Content Include="CSS\KPIDashboard.css" />
     <Content Include="CSS\KPIProductionOEE.css" />
@@ -546,8 +544,6 @@
     <Content Include="HtmlPage1 - Copy.html" />
     <Content Include="HtmlPage1.html" />
     <Content Include="ICPEsquemaComisiones.aspx" />
-    <Content Include="ICPEsquemaComisionesClaro.aspx" />
-    <Content Include="ICPEsquemaComisionesOscuro.aspx" />
     <Content Include="ICPWebService\WsReportBO.asmx" />
     <Content Include="imgs\005278.jpg" />
     <Content Include="imgs\1469735303_dashboard_blue.png" />
@@ -1006,20 +1002,6 @@
     </Compile>
     <Compile Include="ICPEsquemaComisiones.aspx.designer.cs">
       <DependentUpon>ICPEsquemaComisiones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ICPEsquemaComisionesClaro.aspx.cs">
-      <DependentUpon>ICPEsquemaComisionesClaro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ICPEsquemaComisionesClaro.aspx.designer.cs">
-      <DependentUpon>ICPEsquemaComisionesClaro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ICPEsquemaComisionesOscuro.aspx.cs">
-      <DependentUpon>ICPEsquemaComisionesOscuro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ICPEsquemaComisionesOscuro.aspx.designer.cs">
-      <DependentUpon>ICPEsquemaComisionesOscuro.aspx</DependentUpon>
     </Compile>
     <Compile Include="ICPWebService\WsICPOEE.asmx.cs">
       <DependentUpon>WsICPOEE.asmx</DependentUpon>

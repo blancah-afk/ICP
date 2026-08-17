@@ -223,9 +223,6 @@
                                 <li><a href="ReportViewer.aspx?report=45">Net Sales</a></li>
                                 <li><a href="ReportViewer.aspx?report=46">Gross Margin By Sales Rep</a></li>
                                 <li><a href="ReportSalesProfitMaterials.aspx">Sales Profit (Material Sales)</a></li>
-                                <li><a href="ICPEsquemaComisiones.aspx">Sales Commission</a></li>
-                                <li><a href="ICPEsquemaComisionesClaro.aspx">Sales Commission (Tema Claro)</a></li>
-                                <li><a href="ICPEsquemaComisionesOscuro.aspx">Sales Commission (Tema Oscuro)</a></li>
 
                             </ul>
                         </a>
